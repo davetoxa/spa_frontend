@@ -4,7 +4,7 @@ export default class Post extends Component {
   render() {
     return(
       <div>
-        {this.props.id}: {this.props.name}
+        {this.props.id}: {this.props.title}
       </div>
     )
   }
@@ -12,6 +12,5 @@ export default class Post extends Component {
 
 Post.propTypes = {
   id: React.PropTypes.number.isRequired,
-  name: React.PropTypes.string.isRequired,
   description: React.PropTypes.string
 }
