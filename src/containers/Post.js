@@ -4,7 +4,7 @@ export default class Post extends Component {
   render() {
     return(
       <div>
-        {this.props.id}: {this.props.title}
+        {this.props.id}: {this.props.title} | {this.props.username}
       </div>
     )
   }
