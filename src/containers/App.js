@@ -50,7 +50,7 @@ export default class App extends Component {
   render() {
     return(
       <div>
-        <h3>My first SPA application!!!</h3>
+        <h3>My first SPA application!</h3>
         {this.state.posts.map((post) =>{
           return <Post key={post.id} id={post.id} title={post.title} username={post.username}/>
         })}
