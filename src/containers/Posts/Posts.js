@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import 'whatwg-fetch'
 
-import Post from './post'
+import './Posts.css';
+
+import Post from './Post'
 import PostForm from './PostForm'
 
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000/api'
@@ -50,9 +52,12 @@ export default class Posts extends Component {
   render() {
     return(
       <div>
-        <h3>My first SPA application!</h3>
         {this.state.posts.map((post) =>{
-          return <Post key={post.id} id={post.id} title={post.title} username={post.username}/>
+          return(
+            <div key={post.id} className="Post">
+              <Post id={post.id} title={post.title} username={post.username}/>
+            </div>
+          )
         })}
         <PostForm onPostSubmit={this.addPost} />
       </div>

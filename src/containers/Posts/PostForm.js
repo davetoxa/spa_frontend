@@ -32,7 +32,7 @@ export default class PostForm extends Component {
 
   render() {
     return(
-      <form className="postForm" onSubmit={this.handleSubmit}>
+      <form className="PostForm" onSubmit={this.handleSubmit}>
         <input type="text" value={this.state.title} onChange={this.handleTitleChange} placeholder="Title" />
         <input type="text" value={this.state.username} onChange={this.handleUsernameChange} placeholder="Username" />
         <input type="submit" value="Post" className="btn"/>
